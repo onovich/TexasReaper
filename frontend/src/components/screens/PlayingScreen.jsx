@@ -20,7 +20,7 @@ export function PlayingScreen({
   onToggleSelectedCard,
 }) {
   return (
-    <div className="w-full max-w-5xl xl:max-w-5xl 2xl:max-w-6xl h-full min-h-0 flex flex-col justify-between gap-3 lg:gap-5 animate-in fade-in duration-500 pb-2">
+    <div className="w-full max-w-5xl xl:max-w-5xl 2xl:max-w-6xl flex-1 flex flex-col justify-between gap-3 lg:gap-5 animate-in fade-in duration-500 pb-2 min-h-0">
       <div className="flex justify-center shrink-0">
         <div className="w-full max-w-2xl xl:max-w-3xl bg-neutral-900/90 border-2 border-indigo-500/20 px-3 sm:px-6 xl:px-8 py-2 sm:py-3 xl:py-4 rounded-[1.2rem] sm:rounded-[1.6rem] xl:rounded-[2rem] flex flex-row items-center justify-between sm:justify-center gap-2 sm:gap-5 xl:gap-8 shadow-2xl backdrop-blur-md">
           <div className="flex flex-col flex-1 sm:flex-none items-center sm:items-start text-center sm:text-left">

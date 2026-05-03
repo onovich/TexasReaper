@@ -12,12 +12,12 @@ export default function App() {
 
   return (
     <div
-      className="min-h-[100dvh] lg:h-screen w-full bg-neutral-950 text-white font-sans flex flex-col items-center px-2 py-2 sm:px-4 sm:py-4 xl:px-8 select-none overflow-x-hidden overflow-y-auto lg:overflow-hidden"
+      className="h-[100dvh] lg:h-screen w-full bg-neutral-950 text-white font-sans flex flex-col items-center px-2 py-2 sm:px-4 sm:py-4 xl:px-8 select-none overflow-x-hidden overflow-y-auto lg:overflow-hidden"
       onClick={actions.clearSelection}
     >
       <GameEffects />
       <GameHeader chips={state.chips} targetScore={state.targetScore} timeLeft={state.timeLeft} />
-      <div className="w-full flex-1 min-h-0 flex justify-center">
+      <div className="w-full flex-1 flex flex-col items-center min-h-0">
         {state.gameState === GAME_STATES.START ? (
           <StartScreen onStart={actions.resetGame} />
         ) : null}
