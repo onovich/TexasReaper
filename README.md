@@ -1,88 +1,88 @@
 # Texas Reaper
 
-Texas Reaper is a fast-paced poker-flavored score attack game rebuilt for the web with React, Vite, and Tailwind CSS.
+Texas Reaper 是一个以扑克组合判断为核心、强调节奏与取舍的网页小游戏，使用 React、Vite 和 Tailwind CSS 构建。
 
-The current version focuses on three things:
+当前版本的重点有三项：
 
-- preserving the core game loop and hand-evaluation rules
-- delivering a polished mobile-first presentation
-- supporting direct deployment to GitHub Pages
+- 保留核心游戏循环与牌型判定规则
+- 提供以移动端为优先的视觉与交互体验
+- 支持直接部署到 GitHub Pages
 
-## Live Demo
+## 在线体验
 
-- GitHub Pages: https://onovich.github.io/TexasReaper/
+- GitHub Pages：https://onovich.github.io/TexasReaper/
 
-## Highlights
+## 项目特点
 
-- Mobile-first interface with desktop phone-frame presentation
-- React-based game state orchestration with separated data, logic, and UI layers
-- GitHub Pages deployment workflow included
-- Original reference prototype kept in the repository for comparison during iteration
+- 移动端优先设计，桌面端以手机画框方式呈现
+- 使用 React 组织状态，并将数据、逻辑、界面拆分为独立层次
+- 内置 GitHub Actions + GitHub Pages 自动部署流程
+- 仓库中保留原始参考原型，便于后续持续对照迭代
 
-## Tech Stack
+## 技术栈
 
 - React 18
 - Vite 5
 - Tailwind CSS 3
 - GitHub Actions + GitHub Pages
 
-## Local Development
+## 本地开发
 
-Requirements:
+环境要求：
 
-- Node.js 18+
+- Node.js 18 及以上
 - npm
 
-Install dependencies:
+安装依赖：
 
 ```bash
 cd frontend
 npm install
 ```
 
-Start the dev server:
+启动开发环境：
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-Build for production:
+构建生产版本：
 
 ```bash
 cd frontend
 npm run build
 ```
 
-Preview the production build locally:
+本地预览生产构建：
 
 ```bash
 cd frontend
 npm run preview
 ```
 
-## Deployment
+## 部署说明
 
-This repository is configured for GitHub Pages deployment through GitHub Actions.
+当前仓库已经配置好基于 GitHub Actions 的 GitHub Pages 自动部署。
 
-- workflow: .github/workflows/deploy.yml
-- production base path: /TexasReaper/
-- deployment is triggered on push to main
+- 工作流文件：.github/workflows/deploy.yml
+- 生产环境基础路径：/TexasReaper/
+- 推送到 main 分支后会自动触发部署
 
-If Pages is not enabled yet, set the repository Pages source to GitHub Actions.
+如果仓库还没有启用 Pages，需要在 GitHub 仓库设置中将 Pages 来源切换为 GitHub Actions。
 
-## Project Structure
+## 项目结构
 
-- frontend/: web application
-- frontend/src/game/data: static game data and configuration
-- frontend/src/game/logic: pure game rules and score calculation
-- frontend/src/game/hooks: state orchestration and timing
-- frontend/src/components: UI components and screens
-- orogin/: archived reference materials from the original prototype
+- frontend/：Web 前端工程
+- frontend/src/game/data：游戏静态数据与配置
+- frontend/src/game/logic：纯规则逻辑与结算计算
+- frontend/src/game/hooks：状态编排、时序和交互调度
+- frontend/src/components：界面组件与分屏视图
+- orogin/：原始参考原型与归档材料
 
-## Maintainer Notes
+## 维护说明
 
-Internal project notes have been moved out of the public-facing README:
+面向维护者的内部文档已经从公开 README 中拆分出去：
 
 - docs/engineering-retrospective.md
 - docs/roadmap.md
