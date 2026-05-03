@@ -11,13 +11,14 @@ export default function App() {
   const { state, actions } = useTexasReaperGame();
 
   return (
-    <div
-      className="h-[100dvh] lg:h-screen w-full bg-neutral-950 text-white font-sans flex flex-col items-center px-2 py-2 sm:px-4 sm:py-4 xl:px-8 select-none overflow-x-hidden overflow-y-auto lg:overflow-hidden"
-      onClick={actions.clearSelection}
-    >
-      <GameEffects />
-      <GameHeader chips={state.chips} targetScore={state.targetScore} timeLeft={state.timeLeft} />
-      <div className="w-full flex-1 flex flex-col items-center min-h-0">
+    <div className="fixed inset-0 w-full h-[100dvh] bg-black desktop-emulator overflow-hidden flex justify-center items-center">
+      <div
+        className="w-full max-w-[440px] h-[100dvh] sm:h-[92dvh] sm:max-h-[920px] sm:rounded-[2.5rem] sm:border-[8px] sm:border-neutral-900 sm:shadow-[0_0_50px_rgba(0,0,0,0.5)] bg-neutral-950 text-white font-sans flex flex-col items-center px-2 py-2 select-none overflow-x-hidden overflow-y-auto relative"
+        onClick={actions.clearSelection}
+      >
+        <GameEffects />
+        <GameHeader chips={state.chips} targetScore={state.targetScore} timeLeft={state.timeLeft} />
+        <div className="w-full flex-1 flex flex-col items-center min-h-0">
         {state.gameState === GAME_STATES.START ? (
           <StartScreen onStart={actions.resetGame} />
         ) : null}
@@ -52,6 +53,7 @@ export default function App() {
           <GameOverScreen onRestart={actions.resetGame} />
         ) : null}
       </div>
+     </div>
     </div>
   );
 }
