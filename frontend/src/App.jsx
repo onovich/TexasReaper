@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div
-      className="min-h-screen bg-neutral-950 text-white font-sans flex flex-col items-center p-4 select-none overflow-hidden"
+      className="min-h-screen bg-neutral-950 text-white font-sans flex flex-col items-center px-4 py-4 lg:px-8 xl:px-10 2xl:px-12 select-none overflow-hidden"
       onClick={actions.clearSelection}
     >
       <GameEffects />
